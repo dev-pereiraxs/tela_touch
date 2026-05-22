@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado Virtual</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f5f5;
+            min-height:100vh;
+
+            display:flex;
+            justify-content:center;
+            align-items:flex-end;
+        }
+
+        .keyboard{
+
+            width:100%;
+
+            background:white;
+
+            padding:20px;
+
+            display:flex;
+            flex-direction:column;
+            align-items:center;
+
+            box-shadow:0 -5px 20px rgba(0,0,0,0.25);
+
+        }
+
+        .row{
+            margin:5px 0;
+        }
+
+        button{
+
+            background-color:rgb(37,37,218);
+
+            border:none;
+
+            margin:.3rem;
+
+            font-size:1.3rem;
+
+            color:#fff;
+
+            width:60px;
+            height:60px;
+
+            border-radius:.5rem;
+
+            cursor:pointer;
+
+        }
+
+        .delete{
+            width:120px;
+        }
+
+        .space{
+            width:400px;
+        }
+
+        .fechar{
+            width:220px;
+            background:#e53935;
+            margin-top:15px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="keyboard">
+
+        <div class="row">
+
+            <button onclick="digitar('1')">1</button>
+            <button onclick="digitar('2')">2</button>
+            <button onclick="digitar('3')">3</button>
+            <button onclick="digitar('4')">4</button>
+            <button onclick="digitar('5')">5</button>
+            <button onclick="digitar('6')">6</button>
+            <button onclick="digitar('7')">7</button>
+            <button onclick="digitar('8')">8</button>
+            <button onclick="digitar('9')">9</button>
+            <button onclick="digitar('0')">0</button>
+
+            <button
+                class="delete"
+                onclick="apagar()"
+            >
+                Delete
+            </button>
+
+        </div>
+
+
+        <div class="row">
+
+            <button onclick="digitar('q')">q</button>
+            <button onclick="digitar('w')">w</button>
+            <button onclick="digitar('e')">e</button>
+            <button onclick="digitar('r')">r</button>
+            <button onclick="digitar('t')">t</button>
+            <button onclick="digitar('y')">y</button>
+            <button onclick="digitar('u')">u</button>
+            <button onclick="digitar('i')">i</button>
+            <button onclick="digitar('o')">o</button>
+            <button onclick="digitar('p')">p</button>
+
+        </div>
+
+
+        <div class="row">
+
+            <button onclick="digitar('a')">a</button>
+            <button onclick="digitar('s')">s</button>
+            <button onclick="digitar('d')">d</button>
+            <button onclick="digitar('f')">f</button>
+            <button onclick="digitar('g')">g</button>
+            <button onclick="digitar('h')">h</button>
+            <button onclick="digitar('j')">j</button>
+            <button onclick="digitar('k')">k</button>
+            <button onclick="digitar('l')">l</button>
+
+        </div>
+
+
+        <div class="row">
+
+            <button onclick="digitar('z')">z</button>
+            <button onclick="digitar('x')">x</button>
+            <button onclick="digitar('c')">c</button>
+            <button onclick="digitar('v')">v</button>
+            <button onclick="digitar('b')">b</button>
+            <button onclick="digitar('n')">n</button>
+            <button onclick="digitar('m')">m</button>
+
+        </div>
+
+
+        <div class="row">
+
+            <button
+                class="space"
+                onclick="espaco()"
+            >
+                Espaço
+            </button>
+
+        </div>
+
+
+        <button
+            class="fechar"
+            onclick="fecharTeclado()"
+        >
+            Fechar Teclado
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function digitar(letra){
+
+            console.log(letra)
+
+        }
+
+
+        function apagar(){
+
+            console.log('apagou')
+
+        }
+
+
+        function espaco(){
+
+            console.log('espaço')
+
+        }
+
+
+        function fecharTeclado(){
+
+            console.log('fechou')
+
+        }
+
+    </script>
+
+</body>
+
+</html>
